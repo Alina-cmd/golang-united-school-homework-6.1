@@ -96,8 +96,8 @@ func (b *box) RemoveAllCircles() error {
 		_, ok := val.(Circle)
 		if ok {
 			exist = true
-			index++
 			b.shapes = append(b.shapes[:i-index], b.shapes[i-index+1:]...)
+			index++
 		}
 	}
 	if !exist {
