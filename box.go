@@ -93,7 +93,7 @@ func (b *box) RemoveAllCircles() error {
 	foundCircle := false
 	for i := 0; i < len(b.shapes); i++ {
 		shape := b.shapes[i]
-		_, isCircle := shape.(*Circle)
+		_, isCircle := shape.(Circle)
 		if isCircle {
 			foundCircle = true
 			b.ExtractByIndex(i)
