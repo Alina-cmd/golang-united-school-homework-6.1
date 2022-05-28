@@ -92,7 +92,8 @@ func (b *box) SumArea() float64 {
 func (b *box) RemoveAllCircles() error {
 	exist := false
 	index := 0
-	for i, val := range b.shapes {
+	for i := 0; i < len(b.shapes); i++ {
+		val := b.shapes[i]
 		_, ok := val.(Circle)
 		if ok {
 			exist = true
